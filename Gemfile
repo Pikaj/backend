@@ -7,8 +7,14 @@ group :production do
   gem 'shelly-dependencies'
 end
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :production do
+	gem 'pg'
+end
+
+group :development do
+	gem 'sqlite3'
+end
+# Do
 
 gem 'rack-cors', :require => 'rack/cors'
 
